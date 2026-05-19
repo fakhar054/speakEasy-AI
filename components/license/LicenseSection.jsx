@@ -182,7 +182,8 @@ export default function LicenseSection() {
               muted
               controls
               preload="auto"
-              className="w-full h-[400px] rounded-lg object-cover"
+              className="w-full  max-h-[500px] object-cover object-center rounded-lg"
+              // className="w-full h-[600px] md:h-[500px] object-contain bg-black rounded-lg"
             />
           ) : (
             <div className="w-full h-[400px] bg-gray-100 rounded-lg flex items-center justify-center text-gray-400"></div>
