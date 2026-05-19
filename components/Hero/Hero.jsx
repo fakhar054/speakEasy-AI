@@ -4,7 +4,7 @@ import Ballon from "../ballon/Ballon";
 
 export default function Hero() {
   return (
-    <div className="container   hero   md:h-[95vh] py-2 mb-3">
+    <div className="container hero   md:h-[95vh] py-2 mb-3 relative">
       <div className="parenet_div flex flex-col-reverse gap-4 md:flex-row items-center h-full relative">
         <div className="left_side  md:w-1/2 px-4 ">
           <div className="absolute top-5 left-5">

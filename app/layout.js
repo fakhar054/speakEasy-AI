@@ -4,6 +4,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import { FaWhatsapp } from "react-icons/fa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +34,16 @@ export default function RootLayout({ children }) {
       className={`${roboto.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`${roboto.className}`}>
-        {/* <Header />
-        <div className="h-24 md:h-24 block w-full" />
-        <div className="">{children}</div> */}
-
         <LayoutWrapper>{children}</LayoutWrapper>
+
+        <a
+          href="https://wa.me/+37126415000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:scale-110 transition"
+        >
+          <FaWhatsapp className="text-2xl" />
+        </a>
 
         <Toaster position="top-right" reverseOrder={false} />
         {/* <Footer /> */}
