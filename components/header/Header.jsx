@@ -1,13 +1,26 @@
 "use client";
 import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { CiGlobe } from "react-icons/ci";
+import TranslateWrapper from "../google-translator/TranslaterWrapper";
+
 import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Helper to close menu when a link is clicked
   const closeMenu = () => setIsOpen(false);
+
+  const handleGlobeClick = () => {
+    const googleTeCombo =
+      document.querySelector(".goog-te-gadget-simple") ||
+      document.querySelector("#google_translate_element select");
+
+    if (googleTeCombo) {
+      googleTeCombo.click();
+    } else {
+      console.log("Google Translate widget is still loading...");
+    }
+  };
 
   return (
     <>
@@ -66,7 +79,21 @@ export default function Header() {
                 </ul>
               </div>
 
-              <div className="right_section flex flex-1 items-center justify-end gap-4">
+              <div className="right_section flex flex-1 items-center justify-end gap-4 relative">
+                <span
+                  onClick={handleGlobeClick}
+                  style={{
+                    cursor: "pointer",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "5px",
+                  }}
+                  title="Select Language"
+                >
+                  <CiGlobe size={20} />
+                  <TranslateWrapper />
+                </span>
+
                 <Link
                   href="/dashboard"
                   className="hidden sm:flex items-center justify-center px-4 py-2 border border-green-600 text-green-600 rounded-md transition-all hover:bg-green-600 hover:text-white font-medium"

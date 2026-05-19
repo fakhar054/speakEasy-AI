@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { IoMdArrowDown } from "react-icons/io";
 
 export default function Join() {
   return (
@@ -30,13 +31,24 @@ export default function Join() {
                 Our mobile app keeps you connected to your child's progress,
                 anywhere, anytime.
               </p>
-              <Image
+              {/* <Image
                 src="/images/play-store.png"
                 width={170}
                 height={170}
                 alt="play store image"
                 className="cursor-pointer"
-              />
+              /> */}
+
+              <a
+                href="/speekEasyAI.apk"
+                download
+                className="bg-green-color text-white py-2 px-4 rounded-2xl w-fit"
+              >
+                <div className="flex items-center gap-2 ">
+                  <p>Downloand APK</p>
+                  <IoMdArrowDown />
+                </div>
+              </a>
             </div>
             <div className="p-4 border-l-4 border-green-color bg-green-50/30">
               <h3 className="text-lg font-bold flex flex-col md:flex-row items-center gap-4 mb-3">

@@ -4,10 +4,21 @@ import Image from "next/image";
 import { FaUserEdit } from "react-icons/fa";
 import { VscHome } from "react-icons/vsc";
 import { FaArrowRight } from "react-icons/fa";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function DashboardHeader() {
+  const router = useRouter();
+  
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    router.push("/login");
+    toast.success("Logout successfully");
+  };
+
   return (
     <div>
       <header className=" bg-green-color text-white px-8 py-6 shadow-lg flex justify-end">
@@ -41,7 +52,10 @@ export default function DashboardHeader() {
                 <h5>Back to Home</h5>
               </button>
 
-              <button className="w-full text-left px-2 py-2 text-red-500 hover:bg-gray-100 rounded flex items-center gap-2">
+              <button
+                onClick={logout}
+                className="w-full text-left px-2 py-2 text-red-500 hover:bg-gray-100 rounded flex items-center gap-2"
+              >
                 <FaArrowRight />
                 <h5>Logout</h5>
               </button>

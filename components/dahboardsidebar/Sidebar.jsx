@@ -10,6 +10,8 @@ import { MdOutlineHistoryToggleOff } from "react-icons/md";
 import { FaUserEdit } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { TbFileLike } from "react-icons/tb";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const menuItems = [
   { name: "Overview", href: "/dashboard", icon: GrOverview },
@@ -39,7 +41,14 @@ const menuItems = [
 ];
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
+  const router = useRouter();
   const pathname = usePathname();
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    toast.success("Logout successfully");
+    router.push("/login");
+  };
 
   return (
     <>
@@ -96,7 +105,10 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
             })}
           </ul>
           <div className="absolute bottom-0 w-full ">
-            <button className="button flex items-center gap-3 rounded border px-6 py-3  my-5 border-red-500 cursor-pointer hover:bg-white hover:text-green-color transition-all duration-500 text-white">
+            <button
+              onClick={logout}
+              className="button flex items-center gap-3 rounded border px-6 py-3  my-5 border-red-500 cursor-pointer hover:bg-white hover:text-green-color transition-all duration-500 text-white"
+            >
               <FaArrowRight />
 
               <h1 className="text-lg font-extrabold">Logout</h1>
