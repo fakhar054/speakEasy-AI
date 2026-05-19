@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Ballon from "../ballon/Ballon";
+import Heroslider from "../heroslider/Heroslider";
 
 export default function Hero() {
   return (
@@ -17,9 +18,14 @@ export default function Hero() {
             />
           </div>
 
+          <h1 className="text-3xl font-extrabold mr-2 mb-4 text-center text-green-color">
+            SpeakEasy AI
+          </h1>
+
           <h1 className="text-3xl font-bold mb-4">
             Helping Little Hearts Find Big Words.
           </h1>
+
           <p className="text-xl mb-6">
             Watch your child flourish through guided play and emotional
             discovery.
@@ -32,10 +38,11 @@ export default function Hero() {
           </button>
         </div>
         <div className="right_side md:w-1/2 ">
-          <img src="/images/hero-pic.png" alt="Hero pic" />
+          {/* <img src="/images/hero-pic.png" alt="Hero pic" /> */}
+          <Heroslider />
         </div>
       </div>
-      <Ballon />
+      {/* <Ballon /> */}
     </div>
   );
 }

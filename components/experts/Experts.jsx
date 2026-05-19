@@ -16,13 +16,13 @@ const doctors = [
     id: 2,
     name: "Dr. Alex Reed",
     job: "Manual Specialist",
-    img: "/images/parent1.jpeg",
+    img: "/images/parent2.jpeg",
   },
   {
     id: 3,
     name: "Dr. Elena Rossi",
     job: "Sports Therapy",
-    img: "/images/parent1.jpeg",
+    img: "/images/parent3.jpeg",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const doctors = [
     id: 5,
     name: "Dr. Jane Doe",
     job: "Pediatric PT",
-    img: "/images/parent1.jpeg",
+    img: "/images/parent2.jpeg",
   },
 ];
 
@@ -55,7 +55,8 @@ export default function Experts() {
           {doctors.map((doc) => (
             <div
               key={doc.id}
-              className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_25%] min-w-0 px-3"
+              // className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_25%] min-w-0 px-3"
+              className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%] min-w-0 px-3"
             >
               {/* 3. The Card UI */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
