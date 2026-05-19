@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-color: #008000;
+}
+
+.login_page label,
+.forget_page label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.login_page .row_div,
+.forget_page .row_div {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_page input,
+.forget_page input {
+  border: 1px solid gray;
+  padding: 8px 20px;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.login_page input:focus,
+.forget_page:focus {
+  border-color: var(--color-green-color);
+}
+.login_page button,
+.forget_page button {
+  padding: 15px 1px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.register {
+  padding: 10px 20px !important;
+}
+
+.register h1 {
+  margin-top: 30px;
+}
+
+.welcome_page p.welcome {
+  margin-top: -20px;
+}
+
+h1.logo_text {
+  margin-top: -20px;
+}
+
+.welcome_page button {
+  padding: 7px 0;
+  cursor: pointer;
+}
+
+.welcome_page .pic_sec {
+  margin-top: -52px;
+}
+.header_section {
+  padding: 10px 20px !important;
+  /* margin-top: 20px !important; */
+}
+
+.header_section .right_section a {
+  padding: 8px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .header_section .right_section a {
+    padding: 4px 6px;
+    font-size: 14px;
+  }
+  .give_padding {
+    padding: 22px;
+  }
+}
+
+.animate-arrow-grow {
+  display: block;
+ 
+  animation: revealArrow 1.5s ease-out infinite;
+  will-change: clip-path;
+}
+
+@keyframes revealArrow {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* Make it visible quickly as it starts growing */
+  }
+  80% {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1; /* Fully grown and visible */
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+    opacity: 0; /* Fade out at the very end before restarting */
+  }
+}
+
+
