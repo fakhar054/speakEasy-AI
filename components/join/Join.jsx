@@ -45,7 +45,7 @@ export default function Join() {
                 className="bg-green-color text-white py-2 px-4 rounded-2xl w-fit"
               >
                 <div className="flex items-center gap-2 ">
-                  <p>Downloand APK</p>
+                  <p>Download APK</p>
                   <IoMdArrowDown />
                 </div>
               </a>

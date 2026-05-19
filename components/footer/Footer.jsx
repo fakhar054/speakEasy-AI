@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { IoMdArrowDown } from "react-icons/io";
 
 export default function Footer() {
   return (
@@ -15,13 +16,24 @@ export default function Footer() {
                 of play therapy. Helping families grow closer, one session at a
                 time.
               </p>
-              <Image
+              {/* <Image
                 src="/images/play-store.png"
                 alt="speakEasy Ai playstore"
                 width={150}
                 height={150}
                 className="cursor-pointer"
-              />
+              /> */}
+
+              <a
+                href="/speekEasyAI.apk"
+                download
+                className="bg-green-color text-white py-2 px-4 border border-white rounded-2xl w-fit"
+              >
+                <div className="flex items-center gap-2 ">
+                  <p>Download APK</p>
+                  <IoMdArrowDown />
+                </div>
+              </a>
             </div>
 
             {/* Column 2: Quick Links */}

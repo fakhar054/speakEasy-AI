@@ -100,8 +100,16 @@ export default function Header() {
                 >
                   Dashboard
                 </Link>
-                <a
+                {/* <a
                   href="#"
+                  className="flex items-center justify-center px-6 py-2 bg-green-600 text-white rounded-md whitespace-nowrap font-medium hover:bg-opacity-90 shadow-sm text-sm md:text-base"
+                >
+                  Download App
+                </a> */}
+
+                <a
+                  href="/speekEasyAI.apk"
+                  download
                   className="flex items-center justify-center px-6 py-2 bg-green-600 text-white rounded-md whitespace-nowrap font-medium hover:bg-opacity-90 shadow-sm text-sm md:text-base"
                 >
                   Download App
